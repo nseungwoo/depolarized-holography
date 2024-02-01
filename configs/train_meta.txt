@@ -1,0 +1,19 @@
+data_type = 2d
+target_type = 3d
+
+data_path = ./data/DIV2K_HR/train
+out_path = ./results/optimized_meta
+
+data_size = 100
+shuffle = True
+augment = True
+efficient_loader = True
+
+meta_type = SiN
+meta_err = True
+
+optim_method = joint
+num_pre_iters = 0
+num_iters = 2000
+
+tensorboard = True

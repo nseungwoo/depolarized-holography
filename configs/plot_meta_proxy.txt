@@ -1,0 +1,6 @@
+slm_type = meta_proxy
+
+proxy_path  = ./data/proxy_SiN/fitted_params.mat
+
+meta_type = SiN
+meta_err = False

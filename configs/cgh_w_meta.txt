@@ -1,0 +1,15 @@
+data_type = 2.5d
+target_type = 3d
+
+data_path = ./data/RGBD
+out_path = ./results/cgh_w_meta
+
+data_size = 1
+
+meta_type = SiN
+meta_path = ./results/optimized_meta
+
+slm_init_range = 1.0
+
+optim_method = sgd
+num_iters = 1000
