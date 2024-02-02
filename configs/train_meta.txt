@@ -8,12 +8,14 @@ data_size = 100
 shuffle = True
 augment = True
 efficient_loader = True
+rand_focus_plane = True
+clip_method = ste
 
 meta_type = SiN
 meta_err = True
 
 optim_method = joint
 num_pre_iters = 0
-num_iters = 2000
+num_iters = 1000
 
 tensorboard = True

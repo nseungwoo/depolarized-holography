@@ -97,6 +97,7 @@ def add_parameters(p):
     p.add_argument('--eval_plane_idx', type=int, default=0, help='Plane idx of 2D propagation, default 0')
     p.add_argument('--physical_iris', type=str2bool, default=True, help='If True, consider wavelength-dependent aperture')
     p.add_argument('--aperture', type=float, default=1.0, help='Relative aperture size')
+    p.add_argument('--rand_focus_plane', type=str2bool, default=False, help='If True, randomly select focused plane. Only valid for 2D data_type')
 
 
 def set_configs(opt):

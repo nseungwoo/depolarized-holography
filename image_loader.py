@@ -249,10 +249,14 @@ class TargetDataset(Dataset):
     def mask_from_depth(self, depthmap):
         # 2D withouth depthmap
         if depthmap is None:
+            # randomly select focused plane
+            if self.opt['rand_focus_plane']:
+                plane_idx = random.randint(0, self.opt['num_planes']-1) 
             # midplane is focused plane
-            plane_idx = self.opt['num_planes'] // 2
+            else:
+                plane_idx = self.opt['num_planes'] // 2
 
-            # depth mask for single plane
+            # single plane depth mask
             target_mask = torch.zeros(self.opt['num_planes'], *self.opt['roi_res']).to(self.opt['dev'])
             target_mask[plane_idx,:,:] = 1
             
